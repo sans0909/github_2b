@@ -1,0 +1,36 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style media="screen"> 
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .original img{
+        filter:none;
+   }
+    .blur img{
+        filter:blur(30px);
+   }
+    .grayscale img{
+        filter:grayscale(100%);
+   }
+    </style>
+</head>
+<body>
+   <dir class="original">
+   <img src="image.png" ><br>
+   オリジナル画像<br>
+   </dir>
+
+   <dir class="blur">
+   <img src="image.png"><br>
+   </dir>
+ 
+   <div class="grayscale">
+    <img src="image.png"><br>
+   </div>
+</body>
+</html>

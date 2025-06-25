@@ -1,0 +1,9 @@
+p {
+    color: red;
+  }
+  
+  img {
+    width: 300px;       /* 横幅300pxにする */
+    border: 2px solid black; /* 黒枠をつける */
+  }
+  
