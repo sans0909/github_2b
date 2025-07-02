@@ -1,9 +1,20 @@
 <html lang="ja">
 <head>
+    <title>フィルター効果サンプル</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style media="screen"> 
 
+    div
+    {
+        width:320px;
+        height: auto;
+        float: left;
+        position: relative;
+        border: #ddd 3px solid;
+    }
+    
     img{
         width: 100%;
         height: auto;
@@ -11,11 +22,82 @@
     .original img{
         filter:none;
    }
-    .blur img{
-        filter:blur(30px);
+    .blurA img{
+        filter:blur(5px);
    }
-    .grayscale img{
-        filter:grayscale(100%);
+
+    .blurB img{
+        filter:blur(10px);
+   }
+
+    .blurC img{
+        filter:blur(15px);
+   }
+
+   .original img{
+    filter: blur(0px);
+   }
+
+   .brightnessA img{
+        filter:brightness(10%)
+   }
+
+    .brightnessB img{
+        filter:brightness(50%)
+   }
+
+    .brightnessC img{
+        filter:brightness(200%)
+   }
+
+   .contrastA img{
+        filter:contrast(0px);
+   }
+
+   .contrastB img{
+        filter:contrast(50px);
+   }
+
+   .contrastC img{
+        filter:contrast(100px);
+   }
+
+   .drop-shasdowA img{
+        filter:contrast(0px);
+        filter: drop-shadow(0px 0px 0px);
+   }
+
+   .drop-shasdowB img{
+        filter:contrast(50px);
+        filter: drop-shadow(10px 0px 0px);
+   }
+
+   .drop-shasdowC img{
+        filter:contrast(100px);
+        filter: drop-shadow(0px 0px 10px);
+   }
+
+   .grayscaleA img{
+         filter: grayscale(25%);
+   }
+
+   .grayscaleB img{
+         filter: grayscale(50%);
+   }
+
+   .grayscaleC img{
+         filter: grayscale(100%);
+   }
+   .hue-rotateA img{
+         filter: hue-rotate(90deg);
+   }
+
+   .hue-rotateB img{
+         filter: hue-rotate(180deg);
+   }
+
+   .hue-rotateC img{
+         filter: hue-rotate(270deg);
    }
     </style>
 </head>
@@ -24,13 +106,88 @@
    <img src="image.png" ><br>
    オリジナル画像<br>
    </dir>
+   
+   <dir class="brightnessA">
+    <img src="image.png" ><br>
+    オリジナル画像<br>
+    </dir>
+    
+   <dir class="brightnessB">
+    <img src="image.png" ><br>
+    オリジナル画像<br>
+    </dir>
 
-   <dir class="blur">
+    <dir class="brightnessC">
+    <img src="image.png" ><br>
+    オリジナル画像<br>
+    </dir>
+
+   <dir class="blurA">
    <img src="image.png"><br>
+   5px<br>
    </dir>
- 
-   <div class="grayscale">
+
+   <dir class="blurB">
     <img src="image.png"><br>
-   </div>
+    </dir>
+
+    <dir class="blurC">
+    <img src="image.png"><br>
+    10px<br>
+    </dir>
+ 
+    <dir class="contrastA">
+    <img src="image.png"><br>
+    </dir>
+     
+    <dir class="contrastB">
+    <img src="image.png"><br>
+    </dir>
+     
+    <dir class="contrastC">
+    <img src="image.png"><br>
+    10px<br>
+    </dir>
+
+    <dir class="drop-shasdowA">
+    <img src="image.png"><br>
+    </dir>
+         
+    <dir class="drop-shasdowB">
+    <img src="image.png"><br>
+    </dir>
+         
+    <dir class="drop-shasdowC">
+    <img src="image.png"><br>
+    </dir>
+
+    <dir class="grayscaleA">
+    <img src="image.png"><br>
+    </dir>
+
+    <dir class="grayscaleB">
+    <img src="image.png"><br>
+    </dir>
+
+    <dir class="grayscaleC">
+    <img src="image.png"><br>
+    </dir>
+
+    <dir class="hue-rotateA">
+    <img src="image.png"><br>
+    </dir>
+    
+    <dir class="hue-rotateB">
+    <img src="image.png"><br>
+    </dir>
+    
+    <dir class="hue-rotateC">
+    <img src="image.png"><br>
+    </dir>
+    
+
+
+
+
 </body>
 </html>
