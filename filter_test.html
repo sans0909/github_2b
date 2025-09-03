@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    .grid {
+      width: 320px;
+      height: 209px;
+      margin: 4px;
+      float: left;
+      border: solid gray;
+      overflow: hidden;
+    }
+
+    .sample_image {
+      width: 100%;
+      height: 180px;
+      background: url("test_bg.png") no-repeat center/cover;
+      position: relative;
+      transition: 1s;
+    }
+
+    .string {
+      position: relative;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, .5);
+      top: -20px;
+      transition: color 0.3s;
+    }
+
+    .grid:hover .string {
+      color: yellow;
+    }
+
+    .blur:hover       .sample_image { filter: blur(10px); }
+    .brightness:hover .sample_image { filter: brightness(200%); }
+    .saturate:hover   .sample_image { filter: saturate(0%); }
+    .grayscale:hover  .sample_image { filter: grayscale(100%); }
+    .hue-rotate:hover .sample_image { filter: hue-rotate(360deg); }
+    .invert:hover     .sample_image { filter: invert(100%); }
+    .contrast:hover   .sample_image { filter: contrast(200%); }
+    .sepia:hover      .sample_image { filter: sepia(100%); }
+    .opacity:hover    .sample_image { filter: opacity(50%); }
+    .drop-shadow:hover .sample_image { filter: drop-shadow(4px 4px 10px black); }
+
+    .half-blur:hover        .sample_image::before,
+    .half-brightness:hover  .sample_image::before,
+    .half-saturate:hover    .sample_image::before,
+    .half-contrast:hover    .sample_image::before,
+    .half-sepia:hover       .sample_image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("test_bg.png") no-repeat center/cover;
+      -webkit-mask-image: linear-gradient(to right, black 50%, transparent 100%);
+      mask-image: linear-gradient(to right, black 50%, transparent 100%);
+      pointer-events: none;
+      transition: 1s;
+    }
+
+    .half-blur:hover        .sample_image::before { filter: blur(6px); }
+    .half-brightness:hover  .sample_image::before { filter: brightness(200%); }
+    .half-saturate:hover    .sample_image::before { filter: saturate(0%); }
+    .half-contrast:hover    .sample_image::before { filter: contrast(200%); }
+    .half-sepia:hover       .sample_image::before { filter: sepia(100%); }
+  </style>
+</head>
+<body>
+ 
+  <div class="grid"><div class="blur"><div class="sample_image"></div></div><p class="string">blur / ガウシアンぼかし</p></div>
+  <div class="grid"><div class="brightness"><div class="sample_image"></div></div><p class="string">brightness / 明るさ</p></div>
+  <div class="grid"><div class="saturate"><div class="sample_image"></div></div><p class="string">saturate / 彩度</p></div>
+  <div class="grid"><div class="grayscale"><div class="sample_image"></div></div><p class="string">grayscale / モノクロ</p></div>
+  <div class="grid"><div class="hue-rotate"><div class="sample_image"></div></div><p class="string">hue-rotate / 色相</p></div>
+  <div class="grid"><div class="invert"><div class="sample_image"></div></div><p class="string">invert / 反転</p></div>
+  <div class="grid"><div class="contrast"><div class="sample_image"></div></div><p class="string">contrast / コントラスト</p></div>
+  <div class="grid"><div class="sepia"><div class="sample_image"></div></div><p class="string">sepia / セピア</p></div>
+  <div class="grid"><div class="opacity"><div class="sample_image"></div></div><p class="string">opacity / 透明度</p></div>
+  <div class="grid"><div class="drop-shadow"><div class="sample_image"></div></div><p class="string">drop-shadow / 影付き</p></div>
+
+  <div class="grid half-blur"><div class="sample_image"></div><p class="string">half-blur / 左半分ぼかし</p></div>
+  <div class="grid half-brightness"><div class="sample_image"></div><p class="string">half-brightness / 左半分明るく</p></div>
+  <div class="grid half-saturate"><div class="sample_image"></div><p class="string">half-saturate / 左半分彩度ゼロ</p></div>
+  <div class="grid half-contrast"><div class="sample_image"></div><p class="string">half-contrast / 左半分コントラスト</p></div>
+  <div class="grid half-sepia"><div class="sample_image"></div><p class="string">half-sepia / 左半分セピア</p></div>
+</body>
+</html>
